@@ -1,0 +1,19 @@
+created: 20140520214706318
+modified: 20140520221208420
+title: $:/plugins/kpe/mathjax/mathjax.cdn.tid
+type: text/html
+tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
+
+<script type="text/x-mathjax-config">
+(function(){
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [
+        ['$','$'],
+        ['\\\\(','\\\\)']
+      ]
+   }
+  });
+})();
+</script>
+<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>

@@ -1,0 +1,9 @@
+{
+	"title": "$:/plugins/kpe/mathjax",
+	"description": "A MathJax plugin for TiddlyWiki5 adding support for LaTeX",
+	"author": "kpe",
+	"version": "0.1.0",
+	"core-version": ">=5.0.13",
+	"source": "https://github.com/kpe/tw5-mathjax-plugin",
+	"plugin-type": "plugin"
+}
