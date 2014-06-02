@@ -145,6 +145,10 @@ Error message and password prompt
 
 <li>$:/state/showeditpreview</li>
 
+<li>$:/state/tab/moresidebar-{1414686887}</li>
+
+<li>$:/state/tab/sidebar-{-1982391943}</li>
+
 <li>$:/StoryList</li>
 
 <li>$:/themes/tiddlywiki/snowwhite</li>
@@ -3709,7 +3713,7 @@ Error message and password prompt
 <div created="20140602161117593" modified="20140602161124689" title="$:/DefaultTiddlers">
 <pre>[[MathJax Plugin]]</pre>
 </div>
-<div current-tiddler="MathJax Plugin" modified="20140602161856539" title="$:/HistoryList" type="application/json">
+<div current-tiddler="MathJax Plugin" modified="20140602163246252" title="$:/HistoryList" type="application/json">
 <pre>[
     {
         &quot;title&quot;: &quot;GettingStarted&quot;
@@ -3745,13 +3749,44 @@ Error message and password prompt
     },
     {
         &quot;title&quot;: &quot;MathJax Plugin&quot;
+    },
+    {
+        &quot;title&quot;: &quot;MathJax Plugin&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/plugins/kpe/mathjax&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 420.890625,
+            &quot;left&quot;: 847,
+            &quot;width&quot;: 140,
+            &quot;right&quot;: 987,
+            &quot;bottom&quot;: 436.890625,
+            &quot;height&quot;: 16
+        }
+    },
+    {
+        &quot;title&quot;: &quot;Draft of '$:/plugins/kpe/mathjax'&quot;
+    },
+    {
+        &quot;title&quot;: &quot;$:/plugins/kpe/mathjax&quot;
+    },
+    {
+        &quot;title&quot;: &quot;MathJax Plugin&quot;,
+        &quot;fromPageRect&quot;: {
+            &quot;top&quot;: 280.890625,
+            &quot;left&quot;: 777,
+            &quot;width&quot;: 94,
+            &quot;right&quot;: 871,
+            &quot;bottom&quot;: 296.890625,
+            &quot;height&quot;: 16
+        }
     }
 ]</pre>
 </div>
 <div title="$:/isEncrypted">
 <pre>no</pre>
 </div>
-<div dependents="" description="A MathJax plugin for TiddlyWiki5 adding support for LaTeX" plugin-type="plugin" title="$:/plugins/kpe/mathjax" type="application/json" version="0.1.0">
+<div created="20140602163241612" dependents="" description="A MathJax plugin for TiddlyWiki5 adding support for LaTeX" modified="20140602163241612" plugin-type="plugin" title="$:/plugins/kpe/mathjax" type="application/json" version="0.1.0">
 <pre>{
     &quot;tiddlers&quot;: {
         &quot;$:/plugins/kpe/mathjax/mathjax.cdn.tid&quot;: {
@@ -3763,7 +3798,7 @@ Error message and password prompt
             &quot;text&quot;: &quot;&lt;script type=\&quot;text/x-mathjax-config\&quot;&gt;\n(function(){\n  MathJax.Hub.Config({\n    tex2jax: {\n      inlineMath: [\n        ['$','$'],\n        ['\\\\\\\\(','\\\\\\\\)']\n      ]\n   }\n  });\n})();\n&lt;/script&gt;\n&lt;script src=\&quot;https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML\&quot; type=\&quot;text/javascript\&quot;&gt;&lt;/script&gt;&quot;
         },
         &quot;$:/plugins/kpe/mathjax/mathjax.js&quot;: {
-            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/kpe/mathjax/mathjax.js\ntype: application/javascript\nmodule-type: startup\n\nRenders MathJax in tiddlers\n\n\\*/\n(function() {\n\n    /*jslint node: true, browser: true */\n    /*global $tw: false */\n    \&quot;use strict\&quot;;\n\n    var SetWidget = require(\&quot;$:/core/modules/widgets/set.js\&quot;).set;\n    var superRender = SetWidget.prototype.render;\n    var superRefresh = SetWidget.prototype.refresh;\n\n    function doMathJax(el) {\n       if(typeof MathJax != 'undefined') {\n            // MathJax.Hub.TypeSet(this.parentDomNode);\n            MathJax.Hub.Queue([\&quot;Typeset\&quot;, MathJax.Hub, el]);\n        }\n    }\n\n    // intercept render\n    SetWidget.prototype.render = function(parent,nextSibling) {\n        superRender.call(this, parent, nextSibling);\n        if(this.setName == 'storyTiddler') {\n//            console.log('doing mathjax on:',this.parentDomNode);\n            doMathJax(this.parentDomNode);\n        }\n    };\n    // intercept refresh\n    SetWidget.prototype.refresh = function(changedTiddlers) {\n        superRefresh.call(this, changedTiddlers);\n        if(this.setName == 'storyTiddler') {\n//            console.log('refreshing mathjax on:',this.parentDomNode);\n            doMathJax(this.parentDomNode);\n        }\n    };\n\n})();\n&quot;,
+            &quot;text&quot;: &quot;/*\\\ntitle: $:/plugins/kpe/mathjax/mathjax.js\ntype: application/javascript\nmodule-type: startup\n\nRenders MathJax in tiddlers\n\n\\*/\n(function() {\n\n    /*jslint node: true, browser: true */\n    /*global $tw: false */\n    \&quot;use strict\&quot;;\n\n    exports.startup = function(){\n        var SetWidget = require(\&quot;$:/core/modules/widgets/set.js\&quot;).set;\n        var superRender = SetWidget.prototype.render;\n        var superRefresh = SetWidget.prototype.refresh;\n\n        function doMathJax(el) {\n           if(typeof MathJax != 'undefined') {\n                // MathJax.Hub.TypeSet(this.parentDomNode);\n                MathJax.Hub.Queue([\&quot;Typeset\&quot;, MathJax.Hub, el]);\n            }\n        }\n\n        // intercept render\n        SetWidget.prototype.render = function(parent,nextSibling) {\n            superRender.call(this, parent, nextSibling);\n            if(this.setName == 'storyTiddler') {\n    //            console.log('doing mathjax on:',this.parentDomNode);\n                doMathJax(this.parentDomNode);\n            }\n        };\n        // intercept refresh\n        SetWidget.prototype.refresh = function(changedTiddlers) {\n            superRefresh.call(this, changedTiddlers);\n            if(this.setName == 'storyTiddler') {\n    //            console.log('refreshing mathjax on:',this.parentDomNode);\n                doMathJax(this.parentDomNode);\n            }\n        };\n\n    };\n\n    exports.name = \&quot;mathjax\&quot;;\n    exports.platforms = [\&quot;browser\&quot;];\n    exports.after = [\&quot;startup\&quot;];\n    exports.synchronous = false;\n\n})();\n&quot;,
             &quot;title&quot;: &quot;$:/plugins/kpe/mathjax/mathjax.js&quot;,
             &quot;type&quot;: &quot;application/javascript&quot;,
             &quot;module-type&quot;: &quot;startup&quot;
@@ -3779,6 +3814,12 @@ Error message and password prompt
 </div>
 <div modified="20140602161509458" title="$:/state/showeditpreview">
 <pre>yes</pre>
+</div>
+<div modified="20140602163224787" title="$:/state/tab/moresidebar-{1414686887}">
+<pre>$:/core/ui/MoreSideBar/System</pre>
+</div>
+<div modified="20140602163247171" title="$:/state/tab/sidebar-{-1982391943}">
+<pre>$:/core/ui/SideBar/Open</pre>
 </div>
 <div list="[[MathJax Plugin]]" title="$:/StoryList">
 <pre></pre>
