@@ -4,11 +4,29 @@ title: $:/plugins/kpe/mathjax/mathjax.cdn.tid
 type: text/html
 tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
 
-<script type="text/x-mathjax-config">
+<!--script type="text/x-mathjax-config">
 (function(){
+
+/*
+MathJax.Hub.Config({
+  extensions: ["tex2jax.js","MathEvents.js","MathZoom.js","MathMenu.js","toMathML.js","TeX/noErrors.js","TeX/noUndefined.js","TeX/AMSmath.js","TeX/AMSsymbols.js"],
+  jax: ["input/TeX","output/HTML-CSS"],
+  tex2jax: {
+     inlineMath: [
+          ['$','$'],
+          ['\\\\(','\\\\)']
+     ],
+     processEscapes: true
+  }
+});
+*/
+//MathJax.Ajax.loadComplete("[MathJax]/config/TeX-AMS_HTML.js");
+
+/*
   MathJax.Hub.Config({
-    jax: ["input/TeX","output/HTML-CSS"],
-    extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
+      config: "TeX-AMS_HTML-full.js",
+//    jax: ["input/TeX","output/HTML-CSS"],
+//    extensions: ["tex2jax.js","MathMenu.js","MathZoom.js"],
     tex2jax: {
       inlineMath: [
         ['$','$'],
@@ -20,6 +38,7 @@ tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
       extensions: ["AMSsymbols.js","AMSmath.js"]
    }
   });
+*/
 })();
-</script>
-<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+</script-->
+<!--script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script-->

@@ -1,0 +1,166 @@
+{
+    "tiddlers": [
+        {
+            "file": "unpacked/MathJax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/MathJax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/input/TeX/config.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/input/TeX/config.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/config/TeX-AMS-MML_HTMLorMML-full.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/config/TeX-AMS-MML_HTMLorMML-full.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/config/TeX-AMS-MML_HTMLorMML.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/config/TeX-AMS-MML_HTMLorMML.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/config/TeX-AMS_HTML-full.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/config/TeX-AMS_HTML-full.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/config/TeX-AMS_HTML.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/config/TeX-AMS_HTML.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/input/MathML/config.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/input/MathML/config.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/output/HTML-CSS/config.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/output/HTML-CSS/config.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/output/NativeMML/config.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/output/NativeMML/config.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/tex2jax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/tex2jax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/mml2jax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/mml2jax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/MathEvents.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/MathEvents.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/MathZoom.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/MathZoom.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/MathMenu.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/MathMenu.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/toMathML.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/toMathML.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/TeX/noErrors.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/TeX/noErrors.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/TeX/noUndefined.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/TeX/noUndefined.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/TeX/AMSmath.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/TeX/AMSmath.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/extensions/TeX/AMSsymbols.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/extensions/TeX/AMSsymbols.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/element/mml/jax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/element/mml/jax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/input/TeX/jax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/input/TeX/jax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "unpacked/jax/output/HTML-CSS/jax.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/output/HTML-CSS/jax.js",
+                "module-type": "library"
+            }
+        },{
+            "file": "jax/output/HTML-CSS/fonts/TeX/fontdata.js",
+            "fields": {
+                "type": "application/javascript",
+                "title": "$:/plugins/kpe/mathjax/lib/jax/output/HTML-CSS/fonts/TeX/fontdata.js",
+                "module-type": "library"
+            }
+        }
+    ]
+}
