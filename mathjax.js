@@ -78,9 +78,9 @@ Renders MathJax in tiddlers
         var superRefresh = SetWidget.prototype.refresh;
 
         function doMathJax(el) {
-           if(typeof MathJax != 'undefined') {
-                // MathJax.Hub.TypeSet(this.parentDomNode);
-                MathJax.Hub.Queue(["Typeset", MathJax.Hub, el]);
+           if(typeof MathJax != 'undefined' && typeof MathJax.Hub != 'undefined') {
+               MathJax.Hub.Queue(["Typeset", MathJax.Hub, el]);
+               MathJax.Hub.TypeSet(this.parentDomNode);
             }
         }
 
@@ -89,7 +89,7 @@ Renders MathJax in tiddlers
             superRender.call(this, parent, nextSibling);
             if(this.setName == 'storyTiddler') {
                 console.log('doing mathjax on:',this.parentDomNode);
-//                doMathJax(this.parentDomNode);
+                doMathJax(this.parentDomNode);
 //                MathJax.Hub.Typeset(this.parentDomNode);
             }
         };
@@ -98,7 +98,7 @@ Renders MathJax in tiddlers
             superRefresh.call(this, changedTiddlers);
             if(this.setName == 'storyTiddler') {
                 console.log('refreshing mathjax on:',this.parentDomNode);
-//                doMathJax(this.parentDomNode);
+                doMathJax(this.parentDomNode);
                 if(MathJax.Hub) {
 //                    MathJax.Hub.Queue(["Typeset", MathJax.Hub, this.parentDomNode]);
                 }
