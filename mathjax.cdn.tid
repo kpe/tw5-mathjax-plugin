@@ -12,12 +12,13 @@ tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
     tex2jax: {
       inlineMath: [
         ['$','$'],
-        ['\\\\(','\\\\)']
+        ['\\(','\\)']
       ],
       processEscapes: true
    },
    TeX: {
-      extensions: ["AMSsymbols.js","AMSmath.js"]
+      extensions: ["AMSsymbols.js","AMSmath.js"],
+      equationNumbers: { autoNumber: "AMS" }
    }
   });
 })();
