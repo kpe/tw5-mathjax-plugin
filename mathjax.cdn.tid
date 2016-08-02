@@ -12,14 +12,15 @@ tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
     tex2jax: {
       inlineMath: [
         ['$','$'],
-        ['\\\\(','\\\\)']
+        ['\\(','\\)']
       ],
       processEscapes: true
    },
    TeX: {
-      extensions: ["AMSsymbols.js","AMSmath.js"]
+      extensions: ["AMSsymbols.js","AMSmath.js"],
+      equationNumbers: { autoNumber: "AMS" }
    }
   });
 })();
 </script>
-<script src="https://c328740.ssl.cf1.rackcdn.com/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
