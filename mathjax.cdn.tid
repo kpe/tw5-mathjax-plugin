@@ -2,7 +2,7 @@ created: 20140520214706318
 modified: 20140520221208420
 title: $:/plugins/kpe/mathjax/mathjax.cdn.tid
 type: text/html
-tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
+tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup $:/tags/RawStaticContent
 
 <script type="text/x-mathjax-config">
 (function(){
@@ -23,4 +23,4 @@ tags: $:/tags/RawMarkup $:/core/wiki/rawmarkup
   });
 })();
 </script>
-<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript" ></script>
