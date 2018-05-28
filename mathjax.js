@@ -40,9 +40,13 @@ Renders MathJax in tiddlers
 		        options = {throwOnError: false, displayMode: displayMode};
 	      try {
 		        if(!this.document.isTiddlyWikiFakeDom) {
-			          doMathJax(span);
+                if(displayMode) {
+			              span.innerHTML = '$$'+text+'$$';
+                } else {
+                    span.innerHTML = '$'+text+'$';
+                }
 		        } else {
-			          span.innerHTML = katex.renderToString(text,options);
+			          span.innerHTML = text;
 		        }
 	      } catch(ex) {
 		        span.className = "tc-error";
@@ -52,7 +56,7 @@ Renders MathJax in tiddlers
 	      parent.insertBefore(span,nextSibling);
 	      this.domNodes.push(span);
         
-        doMathJax(parent);
+        doMathJax(span);
     };
     MathJaxWidget.prototype.execute = function() {
     }

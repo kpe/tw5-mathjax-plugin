@@ -25,28 +25,31 @@ exports.types = {inline: true};
 exports.init = function(parser) {
 	this.parser = parser;
 	// Regexp to match
-	this.matchRegExp = /\$\$(?!\$)/mg;
+	this.matchRegExp = /\${1,2}(?!\$)/mg;
 };
 
 exports.parse = function() {
 	// Move past the match
 	this.parser.pos = this.matchRegExp.lastIndex;
-	var reEnd = /\$\$/mg;
+  var isInline = !((this.parser.pos-2) >0 && this.parser.source[this.parser.pos-2]=='$' )
+  var reEnd = isInline ? /\$/mg : /\$\$/mg;
 	// Look for the end marker
-	reEnd.lastIndex = this.parser.pos;
-	var match = reEnd.exec(this.parser.source),
-		text,
-		displayMode;
+  var text  = this.parser.source.substr(this.parser.pos);
+  var match = reEnd.exec(text);
+  var displayMode;
+    
 	// Process the text
 	if(match) {
-		text = this.parser.source.substring(this.parser.pos,match.index);
-		displayMode = text.indexOf('\n') != -1;
-		this.parser.pos = match.index + match[0].length;
+		text = text.substring(0,match.index);
+	  displayMode = !isInline;
+		this.parser.pos += text.length + match[0].length;
 	} else {
-		text = this.parser.source.substr(this.parser.pos);
+		text = this.parser.source.substring(this.parser.pos);
 		displayMode = false;
 		this.parser.pos = this.parser.sourceLength;
 	}
+
+    
 	return [{
 		type: "mathjax",
 		attributes: {
